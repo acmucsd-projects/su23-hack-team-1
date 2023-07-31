@@ -13,7 +13,7 @@ function Login(){
         <>
         <form onSubmit={handleSubmit}>
             <label htmlFor="username">username</label>
-            <input value={username} type="username" placeholder ="Enter a username!" id="user" name="user" />
+            <input value={username} type="username" placeholder ="Enter a username" id="user" name="user" />
             <label htmlFor="password">password</label>
             <input value={password} type="password" placeholder="*******" id= "password" name="password"/>
             <button>Login </button>
