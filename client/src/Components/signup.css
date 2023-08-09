@@ -1,0 +1,97 @@
+.sign-up {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.sign-up .div {
+  background: linear-gradient(
+      180deg,
+      rgb(237.3, 253.73, 231.52) 0%,
+      rgb(184.72, 225.04, 205.68) 84.65%,
+      rgb(171.63, 210.16, 191.67) 100%
+  );
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px none;
+  height: 1024px;
+  position: relative;
+  width: 1440px;
+}
+
+.sign-up .log-in {
+  height: 399px;
+  left: 720px;
+  position: absolute;
+  top: 343px;
+  width: 448px;
+}
+
+.sign-up .already-have-an {
+  color: #458144;
+  font-family: "Nunito-Bold", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 720px;
+  letter-spacing: 0;
+  line-height: 30.4px;
+  position: absolute;
+  top: 767px;
+  white-space: nowrap;
+  width: 454px;
+}
+
+.sign-up .text-wrapper {
+  font-weight: 700;
+}
+
+.sign-up .span {
+  font-family: "Nunito-Medium", Helvetica;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.sign-up .overlap-group {
+  height: 303px;
+  left: 226px;
+  position: absolute;
+  top: 324px;
+  width: 287px;
+}
+
+.sign-up .ellipse {
+  background-color: #ebfce6;
+  border-radius: 97.5px/98px;
+  height: 196px;
+  left: 0;
+  position: absolute;
+  top: 37px;
+  width: 195px;
+}
+
+.sign-up .image {
+  height: 303px;
+  left: 28px;
+  mix-blend-mode: luminosity;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 259px;
+}
+
+.sign-up .cloud {
+  height: 118px;
+  left: 1128px;
+  position: absolute;
+  top: 0;
+  width: 312px;
+}
+
+.sign-up .img {
+  height: 138px;
+  left: 0;
+  position: absolute;
+  top: 135px;
+  width: 171px;
+}

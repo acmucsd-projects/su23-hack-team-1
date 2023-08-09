@@ -1,26 +1,25 @@
 import React from 'react'
-import './Login.css';
-
+import "./login.css"
+import axios from 'axios'
 function Login(){
     const [username, setUserName] = useState()
     const [password, setPassword] = useState()
 
     const handleSubmit= (e) =>{
         e.preventDefault();
-        console.log(username);
+        axios.post('', {username, password}) 
+        .then(result => console.log(result))
+        .catch(err => console.log(err))
     }
+
+
     return(
-        <>
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="username">username</label>
-            <input value={username} type="username" placeholder ="Enter a username" id="user" name="user" />
-            <label htmlFor="password">password</label>
-            <input value={password} type="password" placeholder="*******" id= "password" name="password"/>
-            <button>Login </button>
-        </form>
-        <button> First time? Sign up here!</button>
-        </>
+    <div className="label">  
+        <h1 className="text-wrapper">Log In</h1>
+    </div>
     )
 }
 
 export default Login;
+
+

@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
-import './Signup.css'
-
+//import "./signup.css"
+import axios from 'axios'
 
 function Signup(){
     const [username, setUserName] = useState()
@@ -9,20 +9,31 @@ function Signup(){
 
     const handleSubmit= (e) =>{
         e.preventDefault();
-        console.log(username);
+        axios.post('', {username, password}) 
+        .then(result => console.log(result))
+        .catch(err => console.log(err))
     }
+
     return(
-        <>
-        <form onSubmit ={handleSubmit}>
-            <label htmlFor="username">username</label>
-            <input value={username} type="username" placeholder ="Enter a username!" id="user" name="user" />
-            <label htmlFor="password">password</label>
-            <input value={password} type="password" placeholder="*******" id= "password" name="password"/>
-            <button>Sign Up </button>
-        </form>
-        <button> Already have an account? Login here!</button>
-        </>
-    )
+        <div className="sign-up">
+        <div className="div">
+            <img className="log-in" alt="Log in" src="log-in.png" />
+            <h1 className="already-have-an">
+                <span className="text-wrapper">Already have an account? </span>
+                <span className="span">Log in</span>
+                <span className="text-wrapper">&nbsp;</span>
+            </h1>
+            <div className="overlap-group">
+                <div className="ellipse" />
+                <img className="image" alt="Image" src="image-3.png" />
+            </div>
+            <img className="cloud" alt="Cloud" src="cloud.svg" />
+            <img className="img" alt="Cloud" src="image.svg" />
+        </div>
+    </div>
+    );
 }
 
 export default Signup;
+
+

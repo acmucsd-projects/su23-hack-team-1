@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
 import { useState} from 'react'
 import Signup from './Components/Signup'
 import Login from './Components/Login'
