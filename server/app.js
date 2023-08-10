@@ -14,19 +14,24 @@ app.use(express.urlencoded({ extended: false }));
 
 const UserModel = require('./models/Users.js');
 
-app.get("/getUsers", (req, res) => {
-  UserModel.find({}, (err, result) => {
-    if (err) {
-      res.json(err);
+app.post("/Login", (req, res) =>{
+  const {username, password} = req.body;
+  UserModel.findOne({email: email})
+  .then(user => {
+    if(user){
+      if(user.password === password) {
+        res.json("Success")
+      }
+      else{
+        res.json("Incorrect Password")
+      }
+    } else{
+      res.json("User doesn't exist")
     }
-    else{
-      res.json(result);
-    }
-    
-  });
-});
+  })
+})
 
-app.post("/createAccount", async (req, res) =>{
+app.post("/Signup", async (req, res) =>{
   const user = req.body;
   const newUser = new UserModel(user);
   await newUser.save();
