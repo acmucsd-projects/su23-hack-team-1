@@ -11,7 +11,7 @@ function Login(){
 
     const handleSubmit= (e) =>{
         e.preventDefault();
-        axios.post('http://localhost:3000/Login', {username, password}) 
+        axios.post('http://localhost:8000/Login', {username, password}) 
         .then(result => {
             console.log(result)
             if(result.data === "Success"){
@@ -64,9 +64,8 @@ function Login(){
             Login
           </button>
           </form>
-          <p>Already Have an Account</p>
           <Link to="/register" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
-            Sign Up
+            Already have an account? Sign Up
           </Link>
         
       </div>
