@@ -23,53 +23,43 @@ function Login(){
 
 
     return(
-        // <div classname="auth-form-container">
-        //     <form className='signup-form' onSubmit={handleSubmit}>
-        //         <label htmlFor="username">username</label>
-        //         <input value={username} onChange={(e) => setUserName(e.target.value)}type="username" placeholder="Enter username" />
-        //         <label htmlFor="password">password</label>
-        //         <input value={password} oncChange={(e) => setPassword(e.target.value)}type="password" placeholder="Enter password" />
-        //     </form>
-        // </div>
-        <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-      <div className="bg-white p-3 rounded w-25">
-        <h2>Login</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="email">
-              <strong>Email</strong>
-            </label>
-            <input
-              type="username"
-              placeholder="Enter username"
-              autoComplete="off"
-              name="username"
-              className="form-control rounded-0"
-              onChange={(e) => setUserName(e.target.value)}
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="username">
-              <strong>Password</strong>
-            </label>
-            <input
-              type="password"
-              placeholder="Enter Password"
-              name="password"
-              className="form-control rounded-0"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <button type="submit" className="btn btn-success w-100 rounded-0">
-            Login
-          </button>
-          </form>
-          <Link to="/register" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
-            Already have an account? Sign Up
-          </Link>
-        
-      </div>
-    </div>
+      <div className="container-forms">
+            <div class="form-content">
+            <img src="https://cdn.discordapp.com/attachments/905224437517918298/1140505260855668736/refrigerator-icon.png" className="img1" alt="" width="300" height="303"/>
+            <img src="https://cdn.discordapp.com/attachments/905224437517918298/1140507290382909541/Ellipse.png" alt="" className="img2" width="200" height="200" />
+            <form action="#" onSubmit={handleSubmit}>
+            <header>Log In</header>
+                <div className="field-input">
+                <p>Username</p>
+                <input
+                    type="text"
+                    placeholder="Enter username"
+                    autoComplete="off"
+                    name="username"
+                    classname="user"
+                        onChange={(e) => setUserName(e.target.value)}
+                    />
+                </div>
+                <div className="field-input">
+                <p>Password</p>
+                <input
+                    type="text"
+                        placeholder="Enter password"
+                        autoComplete="off"
+                        name="password"
+                        className="pass"
+                        onChange={(e) => setPassword(e.target.value)}
+                />
+            </div>
+            <button type="button" className="btn">
+            Log In
+             </button>  
+            </form>
+            <Link to="/Signup" className="button-style">
+            Don't have an account? Log in
+            </Link>
+            </div>
+        </div>
     )
 }
 
