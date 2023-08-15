@@ -16,7 +16,7 @@ const UserModel = require('./models/Users.js');
 
 app.post("/Login", (req, res) =>{
   const {username, password} = req.body;
-  UserModel.findOne({email: email})
+  UserModel.findOne({username: username})
   .then(user => {
     if(user){
       if(user.password === password) {
@@ -32,11 +32,9 @@ app.post("/Login", (req, res) =>{
 })
 
 app.post("/Signup", async (req, res) =>{
-  const user = req.body;
-  const newUser = new UserModel(user);
-  await newUser.save();
-
-  res.json(user);
+  UserModel.create(req.body)
+  .then(employees => res.json(employees))
+  .catch(err => res.json(err))
 });
 dotenv.config();
 

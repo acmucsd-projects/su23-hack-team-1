@@ -22,6 +22,7 @@ header{
   color: #458144;
   font-family: "Nunito-Bold", Helvetica;
   font-size: 30px;
+  font-weight:bold;
   bottom:270px;
   margin-bottom:30px;
   position:absolute;
@@ -53,9 +54,6 @@ p{
 button{
   background-color: #458144;
   font-family: "Nunito-Bold", Helvetica;
-  padding:0.8rem 0;
-  height:100%;
-  width:435px;
   border-radius:20px;
   margin-top:30px;
   border:none;
@@ -80,4 +78,20 @@ button{
   right:1019px;  
   bottom:467px;
   z-index:1;
+}
+
+.button-style{
+  font-family: "Nunito-Bold", Helvetica;
+  padding:0;
+  display:flex;
+  height:100%;
+  width:100%;
+  border: none;
+  margin-top:30px;
+  font-size:20px;
+  color:#458144;
+  position:relative;
+  left:10px;
+  text-decoration-line: none;
+  background:none;
 }
