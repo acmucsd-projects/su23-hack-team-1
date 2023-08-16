@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 
-const UserModel = require('./models/Users.js');
+const UserModel = require('./models/users.js');
 
 app.post("/Login", (req, res) =>{
   const {username, password} = req.body;
