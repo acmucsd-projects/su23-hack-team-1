@@ -79,18 +79,15 @@ button{
   top:370px;
   right:1019px;  
   bottom:467px;
+  opacity: 0.5;
   z-index:1;
 }
 
-.button-style{
-  font-family: "Nunito-Bold", Helvetica;
-  height:100%;
-  width:435px;
-  border: none;
-  margin-top:30px;
-  font-size:20px;
+.btn1{
   color:#458144;
-  position:absolute;
-  left:1040px;
   text-decoration-line: none;
-}
+  font-size:24px;
+  position:absolute;
+  right:540px;
+  margin-top:30px;
+  }

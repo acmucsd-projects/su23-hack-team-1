@@ -17,11 +17,11 @@ function Signup(){
     return(
         <div className="container-forms">
             <div class="form-content">
-            <img src="https://cdn.discordapp.com/attachments/905224437517918298/1140505260855668736/refrigerator-icon.png" className="img1" alt="" width="300" height="303"/>
+            <img src="https://cdn.discordapp.com/attachments/905224437517918298/1141547763058868224/fridge_6625732.png" className="img1" alt="" width="300" height="303"/>
             <img src="https://cdn.discordapp.com/attachments/905224437517918298/1140507290382909541/Ellipse.png" alt="" className="img2" width="200" height="200" />
             <form onSubmit={handleSubmit}>
             <header>Sign Up</header>
-                <div className="field-input">
+            <div className="field-input">
                 <p>Username</p>
                 <input
                     type="text"
@@ -31,8 +31,8 @@ function Signup(){
                     classname="user"
                     onChange={(e) => setUserName(e.target.value)}
                     />
-                </div>
-                <div className="field-input">
+            </div>
+            <div className="field-input">
                 <p>Password</p>
                 <input
                     type="text"
@@ -46,13 +46,10 @@ function Signup(){
             <button type="submit" className="btn">
             Sign Up
             </button>
-            <a href="http://localhost:3001/Login" className="button-style">Already have an account? Log in</a>
-
             </form>
-
-            {/* <Link to="/Login" className="button-style">
+            <Link to="/Login" className="btn2">
             Already have an account? Log in
-            </Link>  */}
+            </Link> 
             </div>
         </div>
     );
