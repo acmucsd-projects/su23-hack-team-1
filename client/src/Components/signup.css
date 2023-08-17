@@ -66,6 +66,7 @@ button{
 }
 .img1{
   position:absolute;
+  opacity:0.7;
   left:300px;
   top:324px;
   right:927px;  
