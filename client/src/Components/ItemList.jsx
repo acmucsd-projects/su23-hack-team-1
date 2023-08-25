@@ -2,7 +2,6 @@ import "./ItemList.css";
 
 function ItemList() {  
 
-
     return (
     <body class="page-theme">
     <table class="fixed_header">
@@ -56,3 +55,5 @@ function ItemList() {
   </body>
     );
 }
+
+export default ItemList();
