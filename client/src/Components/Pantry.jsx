@@ -3,52 +3,52 @@ import "./ItemList.css";
 
 function Pantry(){
     return(
-        <body class="page-theme">
-        <table class="fixed_header">
+        <body>
+        <table>
         <thead>
           <tr>
-            <th class="col1name">Name:</th>
-            <th class="col2purchased">Purchased:</th>
-            <th class="col3expires">Expires:</th>
-            <th class="col4amount">Amount:</th>
-            <th class="col5button"><button>Sort By:</button></th>
+            <th>Name:</th>
+            <th>Purchased:</th>
+            <th>Expires:</th>
+            <th>Amount:</th>
+            <th><button>Sort By:</button></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="col1name">dfgh</td>
-            <td class="col2purchased"> gg</td>
-            <td class="col3expires">g</td>
-            <td class="col4amount"> gg</td>
-            <td class="col5button"> </td>
+            <td>dfgh</td>
+            <td> gg</td>
+            <td>g</td>
+            <td> gg</td>
+            <td> </td>
           </tr>
           <tr>
-            <td class="col1name">g</td>
-            <td class="col2purchased">  g</td>
-            <td class="col3expires">g</td>
-            <td class="col4amount"> gg</td>
-            <td class="col5button"> </td>
+            <td>g</td>
+            <td>  g</td>
+            <td>g</td>
+            <td> gg</td>
+            <td> </td>
           </tr>
           <tr>
-            <td class="col1name">g</td>
-            <td class="col2purchased">  g</td>
-            <td class="col3expires">g</td>
-            <td class="col4amount"> gg</td>
-            <td class="col5button"> </td>
+            <td>g</td>
+            <td>  g</td>
+            <td>g</td>
+            <td> gg</td>
+            <td> </td>
           </tr>
           <tr>
-            <td class="col1name">g</td>
-            <td class="col2purchased">  g</td>
-            <td class="col3expires">g</td>
-            <td class="col4amount"> gg</td>
-            <td class="col5button"> </td>
+            <td>g</td>
+            <td>  g</td>
+            <td>g</td>
+            <td> gg</td>
+            <td> </td>
           </tr>
           <tr>
-            <td class="col1name">g</td>
-            <td class="col2purchased">  g</td>
-            <td class="col3expires">g</td>
-            <td class="col4amount"> gg</td>
-            <td class="col5button"> </td>
+            <td>g</td>
+            <td>  g</td>
+            <td>g</td>
+            <td> gg</td>
+            <td> </td>
           </tr>
         </tbody>
       </table>
