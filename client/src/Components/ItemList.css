@@ -1,9 +1,8 @@
-.page-theme {
+body {
     background-color: #f0f5ed;
-    display:inline-flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    display:initial;
   }
 
 table {
@@ -13,14 +12,13 @@ table {
     border-bottom-color: #ccc;
     box-shadow: 0px 0px 10px #edeeed;
     height: 1306px;
-    left: 0;
-    top: 0;
-    width: 1320px;
+    /*width: 1320px;*/
+    width: auto;
     margin-top: 50px;
     margin-bottom:50px;
+    margin-left:auto;
+    margin-right:auto;
     empty-cells: show;
-    width: auto;
-    table-layout:auto;
     border-collapse: collapse;
 
 }
