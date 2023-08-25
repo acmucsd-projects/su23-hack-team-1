@@ -1,0 +1,94 @@
+.page-theme {
+    background-color: #f0f5ed;
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  table {
+    background-color: #f9fcf8;
+    border-radius: 37px;
+    border-collapse: collapse;
+    border-bottom-color: #ccc;
+    box-shadow: 0px 0px 10px #edeeed;
+    left: 0;
+    top: 0;
+    width: 1320px;
+    height: 1306px;
+    table-layout: fixed;
+}
+
+table td, table th {
+    color: #92ad91;
+    left: 0;
+    letter-spacing: 0;
+    top: 0;
+    white-space: nowrap;
+    border-bottom: 1px solid rgba(189, 189, 189, 0.644);
+    border-right: 1px solid #92AD92;
+    border-right-style:dashed;
+    font-family: "League Spartan", Helvetica;
+    font-weight: 800;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+table th {
+    font-size: 48px;
+    position:top fixed;
+    padding-left: 20px;
+    padding-right:20px;
+}
+
+table tr {
+    height: auto;
+}
+
+.col1name {
+    width: 20%;
+}
+.col2purchased {
+    width:30%;
+}
+.col3expires {
+    width:20%;
+}
+.col4amount {
+    width: 20%;
+}
+.col5amount {
+    width:10%;
+}
+
+.fixed_header {
+    table-layout: fixed;
+    border-collapse: collapse;
+    text-align: middle;
+  }
+
+  .fixed_header th,
+  .fixed_header td {
+    padding: 5px;
+  }
+
+  table tr:last-child td {
+    border-bottom:none;
+}
+
+table th:last-child {
+    border-right: none;
+}
+
+table th:last-child {
+    border-right: none;
+}
+
+table tr:last-child td:last-child {
+    border-right:none;
+}
+
+table tr td:last-child {
+    border-right:none;
+}
