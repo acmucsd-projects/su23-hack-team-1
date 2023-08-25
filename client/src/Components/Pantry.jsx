@@ -11,7 +11,7 @@ function Pantry(){
             <th class="col2purchased">Purchased:</th>
             <th class="col3expires">Expires:</th>
             <th class="col4amount">Amount:</th>
-            <th class="col5button"><div><button>Sort By:</button></div></th>
+            <th class="col5button"><button>Sort By:</button></th>
           </tr>
         </thead>
         <tbody>
@@ -20,35 +20,35 @@ function Pantry(){
             <td class="col2purchased"> gg</td>
             <td class="col3expires">g</td>
             <td class="col4amount"> gg</td>
-            <td class="col5button"> h</td>
+            <td class="col5button"> </td>
           </tr>
           <tr>
             <td class="col1name">g</td>
             <td class="col2purchased">  g</td>
             <td class="col3expires">g</td>
             <td class="col4amount"> gg</td>
-            <td class="col5button"> h</td>
+            <td class="col5button"> </td>
           </tr>
           <tr>
             <td class="col1name">g</td>
             <td class="col2purchased">  g</td>
             <td class="col3expires">g</td>
             <td class="col4amount"> gg</td>
-            <td class="col5button"> h</td>
+            <td class="col5button"> </td>
           </tr>
           <tr>
             <td class="col1name">g</td>
             <td class="col2purchased">  g</td>
             <td class="col3expires">g</td>
             <td class="col4amount"> gg</td>
-            <td class="col5button"> h</td>
+            <td class="col5button"> </td>
           </tr>
           <tr>
             <td class="col1name">g</td>
             <td class="col2purchased">  g</td>
             <td class="col3expires">g</td>
             <td class="col4amount"> gg</td>
-            <td class="col5button"> h</td>
+            <td class="col5button"> </td>
           </tr>
         </tbody>
       </table>

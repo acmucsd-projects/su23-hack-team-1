@@ -16,6 +16,13 @@ table {
     left: 0;
     top: 0;
     width: 1320px;
+    margin-top: 50px;
+    margin-bottom:50px;
+    empty-cells: show;
+    width: auto;
+    table-layout:auto;
+    border-collapse: collapse;
+
 }
 
 table td, table th {
@@ -37,18 +44,8 @@ table td, table th {
 }
 table th {
     font-size: 48px;
-    position:top fixed;
     padding-left: 20px;
     padding-right:20px;
-}
-
-.fixed_header {
-    width: auto;
-    table-layout:fixed;
-    border-collapse: collapse;
-  }
-
-.fixed_header tbody {
 }
 
 table tr:last-child td {
@@ -69,4 +66,9 @@ table tr:last-child td:last-child {
 
 table tr td:last-child {
     border-right:none;
+}
+
+button {
+    width: 80px;
+    margin-bottom:20px;
 }
