@@ -1,7 +1,7 @@
-import { useState } from "react";
+import {useState} from "react";
 import Calendar from "react-calendar";
 
-const create = () =>{
+const Create = () =>{
     const [name, setUserName] = useState('');
     const [selectitem, setSelectitem] = useState('');
     const [Amount, setAmount] = useState('');
