@@ -7,10 +7,16 @@ const create = () =>{
     const [Amount, setAmount] = useState('');
     const [Fridge, setFridge] = useState('');
     const [date, setDate] = useState(new Date())
+    const handleSubmit = (e) => {
+            e.preventDefalut();
+        const item = {name, selectitem, Amount, Fridge, date};
+    }
+
 
     return(
         <div className="create">
-            <form>
+            <h2>Add New Item</h2>
+            <form onSubmit={handleSubmit}>
                 <lable>name</lable>
                 <input 
                    type = "name"
