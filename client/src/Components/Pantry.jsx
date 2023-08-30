@@ -11,7 +11,7 @@ function Pantry(){
             <th>Purchased:</th>
             <th>Expires:</th>
             <th>Amount:</th>
-            <th><button>Sort By:</button></th>
+            <th><button class="sort-by">Sort By:</button></th>
           </tr>
         </thead>
         <tbody>
@@ -49,6 +49,13 @@ function Pantry(){
             <td>g</td>
             <td> gg</td>
             <td> </td>
+          </tr>
+          <tr class="last-row">
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td><div class="add-item-button"></div></td>
           </tr>
         </tbody>
       </table>
