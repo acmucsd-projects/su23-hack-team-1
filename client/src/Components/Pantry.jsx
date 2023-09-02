@@ -55,7 +55,7 @@ function Pantry(){
             <td> </td>
             <td> </td>
             <td> </td>
-            <td><div class="add-item-button"></div></td>
+            <td><div class="add-item-button"><img src="/client/src/images/lightbutton.png"></img></div></td>
           </tr>
         </tbody>
       </table>

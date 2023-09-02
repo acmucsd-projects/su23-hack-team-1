@@ -73,14 +73,14 @@ button {
 }
 
 .add-item-button {
-    background: url("/client/public/add-item-button/lightbutton.png");
+    background-image: url("/client/src/images/lightbutton.png") no-repeat center center fixed;
     width: 100px;
     height: auto;
     margin-top: -80px;
     margin-bottom: -30px;
 }
 .add-item-button:hover{
-    background: url("/client/public/add-item-button/darkbutton.png");
+    background-image: url("/client/src/images/darkbutton.png") no-repeat center center fixed;
 }
 
 .last-row td {
