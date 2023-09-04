@@ -10,14 +10,15 @@ function Signup() {
     e.preventDefault();
     axios
       .post("http://localhost:8000/Signup", { username, password })
-      .then((result) => {
-        navigate("/Login");
+      .then(result => {console.log(result)
+        navigate("/Login")
       })
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err))
   };
   return (
-    <body className="signup-form"> 
+    <div className="signup-form"> 
         <div className="container"> 
+          <h1 className="header"> Econauts</h1>
             <form >
                 <h2> Sign Up</h2>
                 <p className="user_header">Username</p>
@@ -37,12 +38,12 @@ function Signup() {
                 Sign Up
                 </button>
                 </div>
-                <Link to="/Login" className="btn2">
+                <Link to="/Login" className= "btn2">
                 Already have an account? Log in
                 </Link>
             </form>
         </div>
-    </body>
+    </div>
 )
 }
 export default Signup;
