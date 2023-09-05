@@ -6,10 +6,10 @@ function Signup() {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
   const navigate = useNavigate();
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8000/Signup", { username, password })
+      .post("http://localhost:3001/Signup", { username, password })
       .then(result => {console.log(result)
         navigate("/Login")
       })
