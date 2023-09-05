@@ -45,7 +45,7 @@ function Login() {
             Log in
             </button>
             </div>
-            <Link to="/Login" className= "btn2">
+            <Link to="/Signup" className= "btn2">
             Don't have an account? Sign up
             </Link>
         </form>
