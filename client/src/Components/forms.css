@@ -80,7 +80,7 @@
 
 @media screen and (min-width: 1025px){
   .signup-form{
-    height:100%;
+    height:100vh;
     width:100%;
     background: linear-gradient(
     180deg,
@@ -95,9 +95,6 @@
     display:flex;
     flex-direction: row;
     justify-content:center;
-    position:relative;
-    top:30%;
-    left:10%;
   }
   
   form{
@@ -105,10 +102,18 @@
     color:#458144;
     border-radius:20px;
     border:1px solid #458144;
-    padding:2rem;
-    font-size:30px;
+    padding:1rem;
+    font-size:25px;
+    position:absolute;
+    top:20%;
+    text-align:center;
   }
-  
+  h1{
+    color:#458144;
+    position:absolute;
+    top:10%;
+    font-size:40px;
+  }
   input[type=text]{
   padding:1rem;
   border-radius:10px;
@@ -123,24 +128,34 @@
     color:#458144;
   }
   button:hover{
-    border:1px solid #458144;
+    border:1px solid white;
+    cursor:pointer;
   }
   .user_header, .pass_header{
   margin-bottom:10px;
+  text-align:left;
   }
   .submit-btn{
   margin-top:20px;
-  border-radius:5px;
-  border:1px solid;
+  width:100%;
+  margin-bottom:20px;
+  border-radius:10px;
+  border:none;
   font-size:20px;
   color:white;
   padding:0.5rem;
   background-color: #458144;
   z-index:10;
+  text-align:center;
   }  
   .btn2{
-    margin-top: 10px;
     color:#458144;
+    font-size: 20px;
+    text-decoration:none;
+  }
+  .btn2:hover{
+    cursor:pointer;
+    text-decoration:underline;
   }
 }
 /* .signup-form{
