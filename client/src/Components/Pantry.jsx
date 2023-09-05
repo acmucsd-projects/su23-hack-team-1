@@ -16,38 +16,38 @@ function Pantry(){
         </thead>
         <tbody>
           <tr>
-            <td>dfgh</td>
-            <td> gg</td>
-            <td>g</td>
-            <td> gg</td>
+            <td>Chicken Thigh</td>
+            <td>09/03/2023</td>
+            <td>2 days</td>
+            <td>3 lb</td>
             <td> </td>
           </tr>
           <tr>
-            <td>g</td>
-            <td>  g</td>
-            <td>g</td>
-            <td> gg</td>
+            <td>Apples</td>
+            <td>09/03/2023</td>
+            <td>2 days</td>
+            <td>3 apples</td>
             <td> </td>
           </tr>
           <tr>
-            <td>g</td>
-            <td>  g</td>
-            <td>g</td>
-            <td> gg</td>
+            <td>Carrots</td>
+            <td>09/03/2023</td>
+            <td>2 days</td>
+            <td>3 lb</td>
             <td> </td>
           </tr>
           <tr>
-            <td>g</td>
-            <td>  g</td>
-            <td>g</td>
-            <td> gg</td>
+            <td>Tomato Soup</td>
+            <td>09/03/2023</td>
+            <td>10/01/2024</td>
+            <td>3 cans</td>
             <td> </td>
           </tr>
           <tr>
-            <td>g</td>
-            <td>  g</td>
-            <td>g</td>
-            <td> gg</td>
+            <td>Honey</td>
+            <td>09/03/2023</td>
+            <td>10/01/2026</td>
+            <td>1 bottle</td>
             <td> </td>
           </tr>
           <tr class="last-row">
@@ -55,7 +55,7 @@ function Pantry(){
             <td> </td>
             <td> </td>
             <td> </td>
-            <td><div class="add-item-button"><img src="/client/src/images/lightbutton.png"></img></div></td>
+            <td><button class="add-item-button">+</button></td>
           </tr>
         </tbody>
       </table>

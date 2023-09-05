@@ -12,7 +12,6 @@ table {
     border-bottom-color: #ccc;
     box-shadow: 0px 0px 10px #edeeed;
     height: 1306px;
-    /*width: 1320px;*/
     width: auto;
     margin-top: 50px;
     margin-bottom:50px;
@@ -72,15 +71,28 @@ button {
 
 }
 
+td {
+    font-size: 20px;
+}
+
 .add-item-button {
-    background-image: url("/client/src/images/lightbutton.png") no-repeat center center fixed;
-    width: 100px;
-    height: auto;
+    height: 100px;
     margin-top: -80px;
     margin-bottom: -30px;
+    width: 120px;
+    background-color: white;
+    border-radius: 30px;
+    border-color: rgba(135, 255, 193, 0.867);
+    border-style:solid;
+    border-width: 6px;
+    border-bottom-width: 15px;
+    font-size: 40px;
+    color: rgb(53, 53, 53);
+    font-weight:bold;
+
 }
 .add-item-button:hover{
-    background-image: url("/client/src/images/darkbutton.png") no-repeat center center fixed;
+    background-color: rgba(135, 255, 193, 0.867);
 }
 
 .last-row td {
