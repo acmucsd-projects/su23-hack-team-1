@@ -2,3 +2,4 @@
 client/.eslintcache
 git blame --ignore-revs-file=pathToOurRevsFile pathToSomeFile
 client/.eslintcache
+client/.eslintcache
