@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;800;900&family=Nunito:wght@500;700;900&display=swap');
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    flex-shrink: 0;
+    background: #F4F8F3;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    gap: 15px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 126.5%; /* 3.1625rem */
+}
+
+.econauts{
+    color: #9FDBB6;
+    font-family: Nunito;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 126.5%; 
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    gap: 95px;
+    padding-right: 75px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #A2C6AF;
+    font-family: Nunito;
+    font-size: 21px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    line-height: 126.5%; /* 35.42px */
+    letter-spacing: 2.24px;
+}
