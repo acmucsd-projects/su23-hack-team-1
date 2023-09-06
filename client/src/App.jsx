@@ -12,7 +12,6 @@ function App(){
         <Route path="/Login" element={<Login />}></Route>
         <Route path="/Home" element={<Home />}></Route>
         <Route path="/Pantry" element={<Pantry/>}></Route>
-
       </Routes>
     </BrowserRouter>
   )
