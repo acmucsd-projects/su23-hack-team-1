@@ -19,7 +19,11 @@
     font-weight: 700;
     line-height: 126.5%; /* 3.1625rem */
 }
-
+h1{
+    position:absolute;
+    top:-1.4%;
+    left:3%;
+}
 .econauts{
     color: #9FDBB6;
     font-family: Nunito;
