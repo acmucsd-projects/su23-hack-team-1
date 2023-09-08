@@ -7,11 +7,11 @@ function Pantry(){
         <table>
         <thead>
           <tr>
-            <th>Name:</th>
-            <th>Purchased:</th>
-            <th>Expires:</th>
-            <th>Amount:</th>
-            <th><button class="sort-by">Sort By</button></th>
+            <th><div>Name:</div></th>
+            <th><div>Purchased:</div></th>
+            <th><div>Expires:</div></th>
+            <th><div>Amount:</div></th>
+            <th><div><button class="sort-by">Sort By</button></div></th>
           </tr>
         </thead>
         <tbody>
