@@ -1,9 +1,11 @@
 import React from 'react';
 import "./ItemList.css";
+import Navbar from "./navbar.jsx";
 
 function Pantry(){
     return(
         <body>
+        <Navbar></Navbar>
         <table>
         <thead>
           <tr>
@@ -62,5 +64,4 @@ function Pantry(){
       </body>
     )
 }
-
 export default Pantry;

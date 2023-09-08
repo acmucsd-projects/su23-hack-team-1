@@ -33,7 +33,7 @@ app.post("/Login", (req, res) =>{
 
 app.post("/Signup", async (req, res) =>{
   UserModel.create(req.body)
-  .then(employees => res.json(employees))
+  .then(users => res.json(users))
   .catch(err => res.json(err))
 });
 dotenv.config();
