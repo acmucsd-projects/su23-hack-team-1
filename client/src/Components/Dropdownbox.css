@@ -53,6 +53,7 @@ label, p{
     font-weight: 800;
     margin-right: 10px;
 }
+
 .form{
     align-items: center;
 }
@@ -64,4 +65,17 @@ label, p{
 }
 .checkbox-input{
     width:auto;
+}
+
+.submit-button-add-item{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit-button-add-item{
+    width: min-content;
+    height: min-content;
+    background-color: #92AD92;
+    color: #EDEEED;
 }

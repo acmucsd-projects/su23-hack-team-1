@@ -3,8 +3,6 @@ import { useState } from "react";
 import "./Dropdownbox.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { FaCalendarAlt } from 'react-icons/fa';
-
 
 function Dropdownbox(){
     const [name, setUserName] = useState('');
@@ -14,7 +12,7 @@ function Dropdownbox(){
     const [purchaseDate, setPurchaseDate] = useState(null);
     const [expiryDate, setExpiryDate] = useState(null);
     const [checked, setChecked] = React.useState(false);
-    
+
     const handlePurchaseDateChange = (date) => {
         setPurchaseDate(date);
     };
@@ -44,6 +42,7 @@ function Dropdownbox(){
                         </div>
                         
                         <div className = "form">
+
                         <label>
                             <p>Category</p>
                         <select
@@ -74,6 +73,7 @@ function Dropdownbox(){
                             <option value = "Deep Fridge">Deep Fridge</option> 
                         </select>
                         </label>
+
                         <div>
                         <label><p>Purchase Date:</p></label>
                         <DatePicker
@@ -84,8 +84,9 @@ function Dropdownbox(){
                         showYearDropdown // Enable year dropdown
                         scrollableYearDropdown // Allow scrolling through years
                         />
-                    </div>
-                    <div>
+                        </div>
+
+                        <div>
                         <label>
                             <p>Expiry Date:</p>
                         </label>
@@ -96,16 +97,13 @@ function Dropdownbox(){
                         placeholderText="mm/dd/yyyy"
                         showYearDropdown // Enable year dropdown
                         scrollableYearDropdown // Allow scrolling through years
-                        icon = {FaCalendarAlt}
                         />
-                        
-
-                    </div>
-            
+                        </div>
+                
                         <label>
                             <p>Amount</p>
                         <input
-                            vaule = {Amount}
+                            value = {Amount}
                             onChange ={(e)=>setAmount(e.target.value)}
                             placeholder = "3 apples; 2 lb; etc."
                         />
@@ -113,15 +111,18 @@ function Dropdownbox(){
                         </div>
 
                         <label className = "checkbox-component">
-                    
                         <input className = "checkbox-input"
                         type="checkbox"
                         checked={checked}
                         onChange={handleChange}
                         />
-                        Choose given expiry date: 
-                    </label>
- 
+                            Choose given expiry date: 
+                        </label>
+
+                        <label className = "submit-button">
+                            <input className = "submit-button-add-item" type="submit" />
+                        </label>
+
                 </div>
             </div>
         )
