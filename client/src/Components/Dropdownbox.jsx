@@ -1,22 +1,16 @@
-import {useState} from "react";
+import { useState } from "react";
 import Calendar from "react-calendar";
 
-const Create = () =>{
+const create = () =>{
     const [name, setUserName] = useState('');
     const [selectitem, setSelectitem] = useState('');
     const [Amount, setAmount] = useState('');
     const [Fridge, setFridge] = useState('');
     const [date, setDate] = useState(new Date())
-    const handleSubmit = (e) => {
-            e.preventDefalut();
-        const item = {name, selectitem, Amount, Fridge, date};
-    }
-
 
     return(
         <div className="create">
-            <h2>Add New Item</h2>
-            <form onSubmit={handleSubmit}>
+            <form>
                 <lable>name</lable>
                 <input 
                    type = "name"
@@ -67,14 +61,32 @@ const Create = () =>{
                      onChange ={(e)=>setAmount(e.target.value)}
                 />
                 
-                    
-                
-                 
+                        <label>
+                            <p>Amount</p>
+                        <input
+                            value = {Amount}
+                            onChange ={(e)=>setAmount(e.target.value)}
+                            placeholder = "3 apples; 2 lb; etc."
+                        />
+                        </label>
+                        </div>
 
-        
-            </form>
+                        <label className = "checkbox-component">
+                        <input className = "checkbox-input"
+                        type="checkbox"
+                        checked={checked}
+                        onChange={handleChange}
+                        />
+                            Choose given expiry date: 
+                        </label>
 
-        </div>
-    )
+                        <label className = "submit-button">
+                            <input className = "submit-button-add-item" type="submit" />
+                        </label>
+
+                </div>
+            </div>
+        )
 }
+
 export default Dropdownbox;

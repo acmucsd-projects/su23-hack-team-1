@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+*{
+    font-size: small;
+    color: #666;
+    font-family: 'Montserrat', sans-serif;font-size: 10px;
+    font-weight: 400;
+    line-height: normal;
+}
+.Add-Item-Form{
+    display: flex;
+    width:fit-content;
+    height: max-content;
+    border-radius: 40px;
+    background: #FAFCF9;
+    box-shadow: 0px 0px 10px 0px #EDEEED;
+    padding: 5%;
+    flex-direction: column;
+}
+input{
+    width: 200px;
+    height: 20px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.10);
+}
+
+select{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 220px;
+    height: 40px;
+    border-style: none;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.10);
+}
+
+.name{
+    width: 95px;
+}
+
+label, p{
+    color: #92AD92;
+    font-size: small;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    font-family: "League Spartan;", Helvetica;
+}
+
+.Item{
+    font-size: 30px;
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+.form{
+    align-items: center;
+}
+.checkbox-component{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.checkbox-input{
+    width:auto;
+}
+
+.submit-button-add-item{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit-button-add-item{
+    width: min-content;
+    height: min-content;
+    background-color: #92AD92;
+    color: #EDEEED;
+}
