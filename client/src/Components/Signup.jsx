@@ -6,10 +6,10 @@ function Signup() {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
   const navigate = useNavigate();
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/Signup", { username, password })
+      .post("http://localhost:8000/Signup", {username,password })
       .then(result => {console.log(result)
         navigate("/Login")
       })
@@ -19,7 +19,7 @@ function Signup() {
     <div className="signup-form"> 
         <div className="container"> 
           <h1 className="header"> Econauts</h1>
-            <form >
+            <form onSubmit={handleSubmit}>
                 <h2> Sign Up</h2>
                 <p className="user_header">Username</p>
                 <input
@@ -34,7 +34,7 @@ function Signup() {
                 onChange={(e) => setPassword(e.target.value)}
                 />
                  <div className= "submit">
-                <button type="submit" className="submit-btn" onSubmit={handleSubmit}>
+                <button type="submit" className="submit-btn">
                 Sign Up
                 </button>
                 </div>

@@ -31,7 +31,7 @@ app.post("/Login", (req, res) =>{
   })
 })
 
-app.post("/Signup", async (req, res) =>{
+app.post("/Signup", (req, res) =>{
   UserModel.create(req.body)
   .then(users => res.json(users))
   .catch(err => res.json(err))
@@ -44,6 +44,8 @@ mongoose.connect(process.env.DB_URL, {
   console.log('Connected to MongoDB database');
 });
 
-
+app.listen(8000, () => {
+  console.log("server is listening")
+});
 
 module.exports = app;
