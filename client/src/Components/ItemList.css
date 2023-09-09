@@ -35,11 +35,16 @@ table td, table th{
     border-right: 1px solid #92AD92;
     border-right-style:dashed;
     font-family: "League Spartan", Helvetica;
-    font-weight: 800;
+    font-weight:800;
     padding:20px;
     width:100vh;
     height:8vh;
     table-layout: fixed;
+}
+
+th div {
+    margin-top:-20px;
+    position: absolute;
 }
 
 tr {
