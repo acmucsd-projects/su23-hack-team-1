@@ -114,7 +114,7 @@
     top:10%;
     font-size:40px;
   }
-  input[type=text]{
+  input[type=text], input[type=password]{
   padding:1rem;
   border-radius:10px;
   border: none;

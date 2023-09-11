@@ -36,7 +36,7 @@ function Login() {
             />
             <p className="pass_header">Password</p>
             <input
-            type="text"
+            type="password"
             placeholder="Enter password"
             onChange={(e) => setPassword(e.target.value)}
             />
