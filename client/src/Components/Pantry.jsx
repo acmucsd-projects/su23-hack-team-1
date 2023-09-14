@@ -6,7 +6,8 @@ function Pantry(){
     return(
         <body>
         <Navbar></Navbar>
-        <table>
+        <div class="table-margins">
+        <table class="fixed-size">
         <thead>
           <tr>
             <th><div>Name:</div></th>
@@ -52,6 +53,21 @@ function Pantry(){
             <td>1 bottle</td>
             <td> </td>
           </tr>
+          <tr>
+            <td>Potatoes</td>
+            <td>09/03/2023</td>
+            <td>10/01/2026</td>
+            <td>1 bag</td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td>Potatoes</td>
+            <td>09/03/2023</td>
+            <td>10/01/2026</td>
+            <td>1 bag</td>
+            <td> </td>
+          </tr>
+
           <tr class="last-row">
             <td> </td>
             <td> </td>
@@ -61,6 +77,7 @@ function Pantry(){
           </tr>
         </tbody>
       </table>
+      </div>
       </body>
     )
 }
