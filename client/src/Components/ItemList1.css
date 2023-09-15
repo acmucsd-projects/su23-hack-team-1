@@ -14,14 +14,7 @@ body {
     position: absolute;
 
   }
-  .table-margins {
-    padding: 50px;
-    word-break:break-word;
-    overflow-x:auto;
-    overflow-y:hidden;
-    display:inline-block;
-    overflow:scroll;
-  }
+
 
   .fixed-size {
     height:81vh;
