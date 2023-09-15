@@ -30,6 +30,7 @@ table {
     word-wrap:break-word;
     table-layout: fixed;
     width:auto;
+    box-sizing:border-box;
 }
 
 table thead th {
@@ -69,20 +70,33 @@ th {
     overflow:auto;
 }
 
+.sort-by-column {
+    padding:0px;
+    width:auto;
+}
+
+.sort-by-container {
+    padding: 10px;
+}
+
+th div {
+    padding-top: 10px;
+}
+
 
 tbody{
     
 }
 
-table td, table th{
+td, th{
     color: #92ad91;
     border-bottom: 1px solid rgba(189, 189, 189, 0.644);
     border-right: 1px solid #92AD92;
     border-right-style:dashed;
     font-family: "League Spartan", Helvetica;
     font-weight:800;
-    padding:18px;
-    width:100vh;
+    padding:15px;
+    width: 100vh;
     height:8vh;
     table-layout: fixed;
     text-overflow: ellipsis;
@@ -126,10 +140,19 @@ td {
     font-size: 20px;
 }
 
+.sort-by {
+}
+
+.add-item-button-container {
+    padding-left:50px;
+}
+
 .add-item-button {
     height: 100px;
-    margin-top: -80px;
+    width: 100px;
+    margin-top: -30px;
     margin-bottom: -30px;
+    margin-right:-40px;
     background-color: white;
     border-radius: 30px;
     border-color: rgba(135, 255, 193, 0.867);
