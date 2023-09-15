@@ -65,9 +65,10 @@ table thead th {
   
 
 th {
-    font-size:xx-large;
+    font-size:x-large;
     overflow:auto;
 }
+
 
 tbody{
     
@@ -80,7 +81,7 @@ table td, table th{
     border-right-style:dashed;
     font-family: "League Spartan", Helvetica;
     font-weight:800;
-    padding:20px;
+    padding:18px;
     width:100vh;
     height:8vh;
     table-layout: fixed;
@@ -144,9 +145,6 @@ td {
     background-color: rgba(135, 255, 193, 0.867);
 }
 
-.sort-by{
-
-}
 
 .sort-by:hover{
     background-color: #364536;
