@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
 *{
-    font-size: small;
     color: #666;
-    font-family: 'Montserrat', sans-serif;font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
     font-weight: 400;
     line-height: normal;
 }
@@ -13,22 +13,23 @@
     border-radius: 40px;
     background: #FAFCF9;
     box-shadow: 0px 0px 10px 0px #EDEEED;
-    padding: 5%;
+    padding: 3%;
     flex-direction: column;
 }
 input{
-    width: 200px;
-    height: 20px;
+    width: 18rem;
+    height: 2rem;
     border-radius: 8px;
     background: #FFF;
     box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.10);
 }
 
 select{
-    margin-top: 1%;
+    margin-top: 3%;
     margin-bottom: 1%;
-    width: 220px;
-    height: 40px;
+    width: 20rem;
+    height: 4rem;
+    padding-left: 10px;
     border-style: none;
     border-radius: 8px;
     background: #FFF;
@@ -38,8 +39,14 @@ select{
 .name{
     width: 95px;
 }
-
-label, p{
+p{
+    color: #a6b2a6;
+    font-size: smaller;
+    font-family: "League Spartan;", Helvetica;
+    font-weight: 200;
+    margin-left:3%;
+}
+label{
     color: #92AD92;
     font-size: small;
     font-style: normal;
@@ -54,17 +61,20 @@ label, p{
     margin-right: 10px;
 }
 
-.form{
-    align-items: center;
+.labelled-form{
+    display: flex;
+    flex-direction: column;
 }
 .checkbox-component{
     display: flex;
+    margin: 10px;
     flex-direction: row;
     align-items: center;
     gap: 10px;
 }
 .checkbox-input{
     width:auto;
+    height: min-content;
 }
 
 .submit-button-add-item{
