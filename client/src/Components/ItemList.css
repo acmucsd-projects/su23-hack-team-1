@@ -33,6 +33,7 @@ table {
     box-sizing:border-box;
 }
 
+
 table thead th {
     position: -webkit-sticky;
     position: sticky;
@@ -42,18 +43,8 @@ table thead th {
 }
 
 .table-margins {
-    padding: 1px;
-    word-break:break-word;
-    overflow-x:auto;
-    display:inline-block;
-    overflow:scroll;
+    padding: 2px;
     overflow-y: auto;
-
-}
-    
-.table-margins thead th {
-        position: sticky;
-        top: 0;
 }
     
 .table-margins th {
@@ -70,17 +61,14 @@ th {
     overflow:auto;
 }
 
-.sort-by-column {
-    padding:0px;
-    width:auto;
-}
 
-.sort-by-container {
-    padding: 10px;
-}
+/*.sort-by {
+    float:center;
+}*/
 
 th div {
     padding-top: 10px;
+    position: relative;
 }
 
 
@@ -134,14 +122,10 @@ table tr td:last-child {
     border-right:none;
 }
 
-
-
 td {
     font-size: 20px;
 }
 
-.sort-by {
-}
 
 .add-item-button-container {
     padding-left:50px;
