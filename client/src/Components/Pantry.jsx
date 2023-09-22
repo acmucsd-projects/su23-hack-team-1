@@ -1,8 +1,10 @@
 import React from 'react';
+import { useState } from "react";
 import "./ItemList.css";
 import Navbar from "./navbar.jsx";
 
 function Pantry(){
+  const [selectSort, setSelectSort] = useState('');
     return(
         <body>
         <Navbar></Navbar>
@@ -14,7 +16,17 @@ function Pantry(){
             <th><div>Purchased:</div></th>
             <th><div>Expires:</div></th>
             <th><div>Amount:</div></th>
-            <th class="sort-by-column"><div class="sort-by-container"><button class="sort-by">Sort By</button></div></th>
+            <th><div class ="dropdown-container">
+              <select class="dropdown"
+                value = {selectSort}
+                onChange = {(e)=> setSelectSort(e.target.value)}
+              >
+              <option key="" value="">Sort By</option>
+              <option>Expiration Date</option>
+              <option>Purchase Date</option>
+              <option>Lexicographical</option>
+              </select>
+            </div></th>
           </tr>
         </thead>
         <tbody>
@@ -82,3 +94,5 @@ function Pantry(){
     )
 }
 export default Pantry;
+
+
