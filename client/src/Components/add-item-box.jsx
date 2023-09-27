@@ -65,10 +65,11 @@ function Dropdownbox(){
                             <option key="" value="">
                             Select Item
                             </option>
-                            <option value = "Meat">meat</option>
-                            <option value = "Poultry">poultry</option>
-                            <option value = "Vegetables">vegetables</option>
-                            <option value = "Fruit">fruit</option>
+                            <option value = "Protein">Protein</option>
+                            <option value = "Dairy">Dairy</option>
+                            <option value = "Vegetables">Vegetables</option>
+                            <option value = "Fruits">Fruits</option>
+                            <option value = "Grains">Grains</option>
                         </select>
                         </label>
 
