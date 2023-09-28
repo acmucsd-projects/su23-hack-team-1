@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
-*{
+.Add-Item-Container{
     color: #666;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
