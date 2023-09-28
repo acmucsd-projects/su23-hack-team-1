@@ -39,7 +39,7 @@ select{
 .name{
     width: 95px;
 }
-p{
+.body{
     color: #a6b2a6;
     font-size: smaller;
     font-family: "League Spartan;", Helvetica;

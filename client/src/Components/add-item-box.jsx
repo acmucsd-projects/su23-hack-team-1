@@ -57,7 +57,7 @@ function Dropdownbox(){
                         <div className = "labelled-form">
 
                         <label>
-                            <p>Category</p>
+                            <p className = "body">Category</p>
                         <select
                             value = {selectitem}
                             onChange = {(e)=> setSelectitem(e.target.value)}
@@ -74,7 +74,7 @@ function Dropdownbox(){
                         </label>
 
                         <label> 
-                            <p>Location</p>
+                            <p className="body">Location</p>
                         <select
                          value = {Fridge}
                          onChange={(e)=> setFridge(e.target.value)}
@@ -90,7 +90,7 @@ function Dropdownbox(){
 
                         <div>
                         <label>
-                            <p>Purchase Date:</p>
+                            <p className="body">Purchase Date:</p>
                         </label>
                         <DatePicker
                         selected={purchaseDate}
@@ -104,7 +104,7 @@ function Dropdownbox(){
 
                         <div>
                         <label>
-                            <p>Expiry Date:</p>
+                            <p className="body" >Expiry Date:</p>
                         </label>
                         <DatePicker
                         selected={expiryDate}
@@ -117,8 +117,8 @@ function Dropdownbox(){
                         </div>
                 
                         <label>
-                            <p>Amount</p>
-                        <input
+                            <p className="body">Amount</p>
+                        <input 
                             value = {Amount}
                             onChange ={(e)=>setAmount(e.target.value)}
                             placeholder = "3 apples; 2 lb; etc."
