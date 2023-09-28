@@ -5,6 +5,7 @@ import Navbar from "./navbar.jsx";
 
 function Pantry(){
   const [selectSort, setSelectSort] = useState('');
+  const[isOpen, setIsOpen] = useState(false);
     return(
         <body>
         <Navbar></Navbar>
@@ -85,7 +86,9 @@ function Pantry(){
             <td> </td>
             <td> </td>
             <td> </td>
-            <td class="add-item-button-container"><button class="add-item-button">+</button></td>
+            <td class="add-item-button-container">
+              <button class="add-item-button">+</button>
+            </td>
           </tr>
         </tbody>
       </table>
