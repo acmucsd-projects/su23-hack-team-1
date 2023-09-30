@@ -6,7 +6,7 @@
     justify-content: space-between;
     height: 75px;
     flex-shrink: 0;
-    background: #F4F8F3;
+    background: #f0f5ed;
 }
 
 .logo{
@@ -19,11 +19,7 @@
     font-weight: 700;
     line-height: 126.5%; /* 3.1625rem */
 }
-h1{
-    position:absolute;
-    top:-1.9%;
-    left:3.3rem;
-}
+
 .econauts{
     color: #9FDBB6;
     font-family: Nunito;
@@ -31,6 +27,9 @@ h1{
     font-style: normal;
     font-weight: 700;
     line-height: 126.5%; 
+    position:absolute;
+    top:-0.9rem;
+    left:3.3rem;
 }
 
 .nav-links{
