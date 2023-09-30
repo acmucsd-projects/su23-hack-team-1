@@ -45,7 +45,7 @@ mongoose.connect(process.env.DB_URL, {
 });
 
 app.listen(8000, () => {
-  console.log("Server is listening")
+  console.log("server is listening")
 });
 
 module.exports = app;

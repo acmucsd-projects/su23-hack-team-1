@@ -9,14 +9,14 @@ function Login() {
   const [password, setPassword] = useState();
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     axios
       .post("http://localhost:8000/Login", { username, password })
       .then((result) => {
         console.log("login" + result.data);
         if (result.data === "Success") {
-          navigate("/Home");
+          navigate("/Pantry");
         }
       })
       .catch((err) => console.log(err));
@@ -26,7 +26,7 @@ function Login() {
     <div className="signup-form"> 
     <div className="container"> 
       <h1 className="header"> Econauts</h1>
-        <form >
+        <form onSubmit={handleSubmit}>
             <h2> Log In</h2>
             <p className="user_header">Username</p>
             <input
@@ -41,7 +41,7 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
             />
              <div className= "submit">
-            <button type="submit" className="submit-btn" onSubmit={handleSubmit}>
+            <button type="submit" className="submit-btn">
             Log in
             </button>
             </div>
