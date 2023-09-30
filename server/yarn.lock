@@ -394,6 +394,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+lsof@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/lsof/-/lsof-0.1.0.tgz#ac02d4d87606201f1364bafb15c491cfd5ae3092"
+  integrity sha512-RlNW3s4gQ0CIlDM3jwfx/Ogdwpa8PHySyd5FnKKXfi2NPXEjqgwONyA0y9ax33ur1G+K+f192zzKNQljupSgNA==
+
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz"

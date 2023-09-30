@@ -2,10 +2,20 @@ import React from 'react';
 import { useState } from "react";
 import "./ItemList.css";
 import Navbar from "./navbar.jsx";
-
+import Dropdownbox from "./add-item-box.jsx";
+import Modal from 'react-modal';
 function Pantry(){
+
+
+  function openModal(){
+    setIsOpen(true);
+  }
+
+  function closeModal(){
+    setIsOpen(false);
+  }
   const [selectSort, setSelectSort] = useState('');
-  const[isOpen, setIsOpen] = useState(false);
+  const[modalIsOpen, setIsOpen] = useState(false);
     return(
         <body>
         <Navbar></Navbar>
@@ -87,7 +97,15 @@ function Pantry(){
             <td> </td>
             <td> </td>
             <td class="add-item-button-container">
-              <button class="add-item-button">+</button>
+              <button class="add-item-button" onClick={openModal}>+</button>
+              <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+              >
+              <Dropdownbox>
+              </Dropdownbox>
+
+              </Modal>
             </td>
           </tr>
         </tbody>
