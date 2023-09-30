@@ -99,6 +99,7 @@ function Pantry(){
             <td class="add-item-button-container">
               <button class="add-item-button" onClick={openModal}>+</button>
               <Modal
+                className = "modal"
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
               >
