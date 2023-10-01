@@ -12,52 +12,120 @@ const productData = [
       amount: "2 apples",
     },
     {
-        name: "Lettuce",
-        category: "Vegetables",
-        location: "Pantry",
-        purchasedate: "12/12/2022",
-        expirydate: "9/26/2023",
-        amount: "1 lb",
+      name: "Oranges",
+      category: "Fruits",
+      location: "Pantry",
+      purchasedate: "12/12/2022",
+      expirydate: "10/10/2023",
+      amount: "2 oranges",
     },
     {
-        name: "Eggs",
-        category: "Poultry",
-        location: "Fridge",
-        purchasedate: "12/12/2022",
-        expirydate: "9/31/2023",
-        amount: "2 cartons",
-      },
-      {
-        name: "Chicken",
-        category: "Meat",
-        location: "Deep Fridge",
-        purchasedate: "12/12/2022",
-        expirydate: "10/30/2023",
-        amount: "2 lb",
-      },
-      {
-        name: "Milk",
-        category: "Dairy",
-        location: "Fridge",
-        purchasedate: "12/12/2022",
-        expirydate: "9/30/2023",
-        amount: "2 cartons",
-      },
-      {
-        name: "Milk",
-        category: "Dairy",
-        location: "Fridge",
-        purchasedate: "12/12/2022",
-        expirydate: "9/21/2023",
-        amount: "2 cartons",
-      },
+      name: "Lettuce",
+      category: "Vegetables",
+      location: "Pantry",
+      purchasedate: "10/7/2022",
+      expirydate: "10/14/2023",
+      amount: "1 lb",
+    },
+    {
+      name: "Eggs",
+      category: "Poultry",
+      location: "Fridge",
+      purchasedate: "12/12/2022",
+      expirydate: "10/9/2023",
+      amount: "2 cartons",
+    },
+    {
+      name: "Chicken",
+      category: "Meat",
+      location: "Deep Fridge",
+      purchasedate: "12/12/2022",
+      expirydate: "10/07/2023",
+      amount: "2 lb",
+    },
+    {
+      name: "Mushroom",
+      category: "Vegetables",
+      location: "Fridge",
+      purchasedate: "12/12/2022",
+      expirydate: "10/12/2023",
+      amount: "1 lb",
+    },
+    {
+      name: "Salmon",
+      category: "Meat",
+      location: "Deep Fridge",
+      purchasedate: "12/12/2022",
+      expirydate: "10/19/2023",
+      amount: "8 oz.",
+    },
+    {
+      name: "Milk",
+      category: "Dairy",
+      location: "Fridge",
+      purchasedate: "12/12/2022",
+      expirydate: "10/8/2023",
+      amount: "2 cartons",
+    },
+    {
+      name: "Halibut",
+      category: "Meat",
+      location: "Deep Fridge",
+      purchasedate: "12/12/2022",
+      expirydate: "9/21/2023",
+      amount: "1 lb",
+    },
+    {
+      name: "Milk",
+      category: "Dairy",
+      location: "Fridge",
+      purchasedate: "12/12/2022",
+      expirydate: "9/30/2023",
+      amount: "1 carton",
+    },
+    {
+      name: "Bread",
+      category: "Grain",
+      location: "Pantry",
+      purchasedate: "12/12/2022",
+      expirydate: "9/30/2023",
+      amount: "finished",
+    },
+    {
+      name: "Wontons",
+      category: "Meat",
+      location: "Deep Fridge",
+      purchasedate: "12/12/2022",
+      expirydate: "9/21/2023",
+      amount: "finished",
+    },
+    {
+      name: "Cheese",
+      category: "Dairy",
+      location: "Fridge",
+      purchasedate: "12/12/2022",
+      expirydate: "9/29/2023",
+      amount: "2 oz.",
+    },
+    {
+      name: "Cereal",
+      category: "Grain",
+      location: "Pantry",
+      purchasedate: "12/12/2022",
+      expirydate: "9/30/2023",
+      amount: "1 box",
+    },
   ];
 function Home(){
-    const currentDate = new Date();
+    const currDate = new Date();
+
+    const aboutToExpire = new Date();
+    aboutToExpire.setDate(currDate.getDate() + 14);
+
     const calculateDaysUntilExpiration = (expirationDate) => {
-        const diffInTime = new Date(expirationDate) - currentDate;
-        const diffInDays = Math.ceil(diffInTime / (1000 * 60 * 60 * 24));
-        return diffInDays;
+        const diffMilliseconds = new Date(expirationDate) - currDate;
+        const diffDays = Math.ceil(diffMilliseconds / (1000 * 60 * 60 * 24));
+        return diffDays;
       };
 
 
@@ -72,7 +140,7 @@ function Home(){
 
         <div className="view-container">
         
-        {productData.map((purchase, index) => {
+        {productData.filter(product => new Date(product.expirydate) < aboutToExpire && new Date(product.expirydate) > currDate).map((purchase, index) => {
             const daysExpiry = calculateDaysUntilExpiration(purchase.expirydate);
             return (
             <div className="view-item">
@@ -103,7 +171,7 @@ function Home(){
 
         <div className="view-container">
 
-        {productData.map((purchase, index) => {
+        {productData.filter(product => new Date(product.expirydate) < currDate).map((purchase, index) => {
             return (
             <div className="view-item" style={{ border: '4px solid #EA8888' }}>
 
