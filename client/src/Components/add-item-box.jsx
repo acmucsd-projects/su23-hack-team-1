@@ -2,11 +2,13 @@ import React from "react";
 import { useState } from "react";
 import "./add-item-box.css";
 import DatePicker from "react-datepicker";
+import axios from "axios";
 import "react-datepicker/dist/react-datepicker.css";
 
 function Dropdownbox() {
+  const url = "http://localhost:3001/Pantry";
   const [name, setUserName] = useState("");
-  const [selectitem, setSelectitem] = useState("");
+  const [selectItem, setSelectitem] = useState("");
   const [Amount, setAmount] = useState("");
   const [Fridge, setFridge] = useState("");
   const [purchaseDate, setPurchaseDate] = useState(null);
@@ -27,9 +29,19 @@ function Dropdownbox() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios.post(url,{
+      name,
+      selectItem,
+      Amount,
+      Fridge,
+      purchaseDate,
+      expiryDate,
+      }).then(res => {
+        console.log("success");
+      })
     console.log("Form submitted:", {
       name,
-      selectitem,
+      selectItem,
       Amount,
       Fridge,
       purchaseDate,
@@ -61,7 +73,7 @@ function Dropdownbox() {
             <label>
               <p className="body">Category</p>
               <select
-                value={selectitem}
+                value={selectItem}
                 onChange={(e) => setSelectitem(e.target.value)}
               >
                 <option key="" value="">
