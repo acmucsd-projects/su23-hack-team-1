@@ -40,7 +40,7 @@ function Login() {
             placeholder="Enter password"
             onChange={(e) => setPassword(e.target.value)}
             />
-             <div className= "submit">
+            <div className= "submit">
             <button type="submit" className="submit-btn">
             Log in
             </button>
