@@ -37,7 +37,9 @@ function Dropdownbox() {
       checked,
     });
   };
-
+  function newItem(){
+    console.log("adding new item");
+  }
   return (
     <div className="Add-Item-Container">
       <div className="Add-Item-For">
