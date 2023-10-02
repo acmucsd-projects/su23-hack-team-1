@@ -28,7 +28,7 @@ function Navbar(){
             </div>
             
             <nav className = 'nav-links'>
-                <a href = "Home">Homepage</a>
+                <a href = "Home">Home</a>
                 <a href = "Pantry">Pantry</a>
             </nav>
         </div>

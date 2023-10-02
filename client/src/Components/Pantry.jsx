@@ -36,6 +36,8 @@ function Pantry(){
               <option>Expiration Date</option>
               <option>Purchase Date</option>
               <option>Lexicographical</option>
+              <option>Amount</option>
+
               </select>
             </div></th>
           </tr>
