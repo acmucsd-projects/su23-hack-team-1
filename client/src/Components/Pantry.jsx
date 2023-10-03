@@ -1,12 +1,21 @@
 import React from 'react';
-import { useState } from "react";
+import { useState,useEffect} from "react";
 import "./ItemList.css";
 import Navbar from "./navbar.jsx";
 import Dropdownbox from "./add-item-box.jsx";
 import Modal from 'react-modal';
+import axios from "axios";
+
 function Pantry(){
 
 
+  const[data,setData] = useState([])
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/Items')
+    .then(res => setData(res.data))
+    .catch(err => console.log(err));
+  }, [])
   function openModal(){
     setIsOpen(true);
   }
@@ -43,14 +52,18 @@ function Pantry(){
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Chicken Thigh</td>
-            <td>09/03/2023</td>
-            <td>2 days</td>
-            <td>3 lb</td>
-            <td> </td>
-          </tr>
-          <tr>
+          {
+          data.map((item,i) => (
+            <tr key={i}>
+              <td>{item.name}</td>
+              <td>{item.purchaseDate}</td>
+              <td>{item.expiryDate}</td>
+              <td>{item.amount}</td>
+              <td> </td>
+              </tr>
+          ))
+          }
+          {/* <tr>
             <td>Apples</td>
             <td>09/03/2023</td>
             <td>2 days</td>
@@ -91,7 +104,7 @@ function Pantry(){
             <td>10/01/2026</td>
             <td>1 bag</td>
             <td> </td>
-          </tr>
+          </tr> */}
 
           <tr class="last-row">
             <td> </td>

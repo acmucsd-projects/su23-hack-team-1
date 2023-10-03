@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 
 const UserModel = require('./models/users.js');
-
+const ItemModel = require('./models/addunit.js');
 app.post("/Login", (req, res) =>{
   const {username, password} = req.body;
   UserModel.findOne({username: username})
@@ -36,7 +36,14 @@ app.post("/Signup", (req, res) =>{
   .then(users => res.json(users))
   .catch(err => res.json(err))
 });
+
+app.post("/Pantry", (req, res) =>{
+  ItemModel.create(req.body)
+  .then(add => res.json(add))
+  .catch(err => res.json(err))
+});
 dotenv.config();
+
 
 mongoose.connect(process.env.DB_URL, {
     useNewUrlParser: true,

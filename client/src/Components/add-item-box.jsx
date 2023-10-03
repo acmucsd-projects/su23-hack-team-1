@@ -4,54 +4,46 @@ import "./add-item-box.css";
 import DatePicker from "react-datepicker";
 import axios from "axios";
 import "react-datepicker/dist/react-datepicker.css";
-
 function Dropdownbox() {
-  const url = "http://localhost:3001/Pantry";
-  const [name, setUserName] = useState("");
-  const [selectItem, setSelectitem] = useState("");
-  const [Amount, setAmount] = useState("");
-  const [Fridge, setFridge] = useState("");
-  const [purchaseDate, setPurchaseDate] = useState(null);
-  const [expiryDate, setExpiryDate] = useState(null);
-  const [checked, setChecked] = React.useState(false);
+  const url = "http://localhost:3001/Items";
+  // const [name, setUserName] = useState("");
+  // const [selectItem, setSelectitem] = useState("");
+  // const [Amount, setAmount] = useState("");
+  // const [Fridge, setFridge] = useState("");
+  // const [purchaseDate, setPurchaseDate] = useState(null);
+  // const [expiryDate, setExpiryDate] = useState(null);
+  // const [checked, setChecked] = React.useState(false);
 
-  const handlePurchaseDateChange = (date) => {
-    setPurchaseDate(date);
-  };
+  const [values, setValues] = useState({
+    name: '',
+    itemType:'',
+    amount:'',
+    fridge:'',
+    purchaseDate:'',
+    expiryDate:'',
+  })
 
-  const handleExpiryDateChange = (date) => {
-    setExpiryDate(date);
-  };
+  // const handlePurchaseDateChange = (date) => {
+  //   setPurchaseDate(date);
+  // };
 
-  const handleChange = () => {
-    setChecked(!checked);
-  };
+  // const handleExpiryDateChange = (date) => {
+  //   setExpiryDate(date);
+  // };
+
+  // const handleChange = () => {
+  //   setChecked(!checked);
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(url,{
-      name,
-      selectItem,
-      Amount,
-      Fridge,
-      purchaseDate,
-      expiryDate,
-      }).then(res => {
-        console.log("success");
-      })
-    console.log("Form submitted:", {
-      name,
-      selectItem,
-      Amount,
-      Fridge,
-      purchaseDate,
-      expiryDate,
-      checked,
-    });
+    axios.post(url,values)
+    .then(res => {
+      console.log(res);
+    })
+    .catch(err => console.log(err));
   };
-  function newItem(){
-    console.log("adding new item");
-  }
+
   return (
     <div className="Add-Item-Container">
       <div className="Add-Item-For">
@@ -64,8 +56,7 @@ function Dropdownbox() {
               type="text"
               placeholder="Name"
               required
-              value={name}
-              onChange={(e) => setUserName(e.target.value)}
+              onChange={e => setValues({...values, name: e.target.value})}
             />
           </div>
 
@@ -73,8 +64,7 @@ function Dropdownbox() {
             <label>
               <p className="body">Category</p>
               <select
-                value={selectItem}
-                onChange={(e) => setSelectitem(e.target.value)}
+                onChange={e => setValues({...values, itemType: e.target.value})}
               >
                 <option key="" value="">
                   Select Item
@@ -90,8 +80,7 @@ function Dropdownbox() {
             <label>
               <p className="body">Location</p>
               <select
-                value={Fridge}
-                onChange={(e) => setFridge(e.target.value)}
+                onChange={e => setValues({...values, fridge: e.target.value})}
               >
                 <option key="" value="">
                   Store in fridge?
@@ -107,8 +96,7 @@ function Dropdownbox() {
                 <p className="body">Purchase Date:</p>
               </label>
               <DatePicker
-                selected={purchaseDate}
-                onChange={handlePurchaseDateChange}
+                onChange={e => setValues({...values, purchaseDate: e.target.value})}
                 dateFormat="MM/dd/yyyy"
                 placeholderText="mm/dd/yyyy"
                 showYearDropdown // Enable year dropdown
@@ -121,8 +109,7 @@ function Dropdownbox() {
                 <p className="body">Expiry Date:</p>
               </label>
               <DatePicker
-                selected={expiryDate}
-                onChange={handleExpiryDateChange}
+                onChange={e => setValues({...values, expiryDate: e.target.value})}
                 dateFormat="MM/dd/yyyy"
                 placeholderText="mm/dd/yyyy"
                 showYearDropdown // Enable year dropdown
@@ -133,22 +120,11 @@ function Dropdownbox() {
             <label>
               <p className="body">Amount</p>
               <input
-                value={Amount}
-                onChange={(e) => setAmount(e.target.value)}
+                onChange={e => setValues({...values, amount: e.target.value})}
                 placeholder="3 apples; 2 lb; etc."
               />
             </label>
           </div>
-
-          <label className="checkbox-component">
-            <input
-              className="checkbox-input"
-              type="checkbox"
-              checked={checked}
-              onChange={handleChange}
-            />
-            Choose given expiry date:
-          </label>
 
           <label className="submit-button">
             <input
