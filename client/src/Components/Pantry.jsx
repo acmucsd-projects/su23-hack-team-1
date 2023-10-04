@@ -12,7 +12,7 @@ function Pantry(){
   const[data,setData] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:8000/Items')
+    axios.get('http://localhost:8000/Pantry')
     .then(res => setData(res.data))
     .catch(err => console.log(err));
   }, [])

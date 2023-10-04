@@ -5,7 +5,7 @@ import DatePicker from "react-datepicker";
 import axios from "axios";
 import "react-datepicker/dist/react-datepicker.css";
 function Dropdownbox() {
-  const url = "http://localhost:3001/Items";
+  const url = "http://localhost:8000/Pantry";
   // const [name, setUserName] = useState("");
   // const [selectItem, setSelectitem] = useState("");
   // const [Amount, setAmount] = useState("");
@@ -13,24 +13,18 @@ function Dropdownbox() {
   // const [purchaseDate, setPurchaseDate] = useState(null);
   // const [expiryDate, setExpiryDate] = useState(null);
   // const [checked, setChecked] = React.useState(false);
-
+  const[startDate, setStartDate] = useState();
+  const[endDate, setEndDate] = useState();
   const [values, setValues] = useState({
     name: '',
     itemType:'',
     amount:'',
     fridge:'',
-    purchaseDate:'',
-    expiryDate:'',
+    purchaseDate:startDate,
+    expiryDate:endDate,
   })
 
-  // const handlePurchaseDateChange = (date) => {
-  //   setPurchaseDate(date);
-  // };
-
-  // const handleExpiryDateChange = (date) => {
-  //   setExpiryDate(date);
-  // };
-
+  
   // const handleChange = () => {
   //   setChecked(!checked);
   // };
@@ -55,7 +49,6 @@ function Dropdownbox() {
               className="name"
               type="text"
               placeholder="Name"
-              required
               onChange={e => setValues({...values, name: e.target.value})}
             />
           </div>
@@ -96,7 +89,8 @@ function Dropdownbox() {
                 <p className="body">Purchase Date:</p>
               </label>
               <DatePicker
-                onChange={e => setValues({...values, purchaseDate: e.target.value})}
+                selected={startDate}
+                onChange={startDate => setStartDate(startDate)}
                 dateFormat="MM/dd/yyyy"
                 placeholderText="mm/dd/yyyy"
                 showYearDropdown // Enable year dropdown
@@ -109,7 +103,9 @@ function Dropdownbox() {
                 <p className="body">Expiry Date:</p>
               </label>
               <DatePicker
-                onChange={e => setValues({...values, expiryDate: e.target.value})}
+                selected={endDate}
+                onChange={(endDate) => setEndDate(endDate)}
+                //onChange={e => setValues({...values, expiryDate: e.target.value})}
                 dateFormat="MM/dd/yyyy"
                 placeholderText="mm/dd/yyyy"
                 showYearDropdown // Enable year dropdown
@@ -121,7 +117,7 @@ function Dropdownbox() {
               <p className="body">Amount</p>
               <input
                 onChange={e => setValues({...values, amount: e.target.value})}
-                placeholder="3 apples; 2 lb; etc."
+                placeholder="1,2,3..."
               />
             </label>
           </div>

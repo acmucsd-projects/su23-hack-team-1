@@ -2,36 +2,28 @@
 
 const mongoose = require("mongoose");
 const AddUnitSchema = new mongoose.Schema({
-    item:{
-        type: String,
-        enum: ['Meat','Poultry','Vegetables','Fruit'],
-        required: true,
+    name:{
+        type:String,
     },
-    storeInFridge:{
+    itemType:{
         type: String,
-        enum: ['Yes','No','Deep Fridge'],
-        required: true,
+        // enum: ['Protein','Meat','Poultry','Vegetables','Fruit'],
+        // required: true,
+    },
+    fridge:{
+        type: String,
+        // enum: ['Yes','No','Deep Fridge'],
     },
     purchaseDate:{
         type: Date,
-        required: true,
     },
     expiryDate:{
         type: Date,
-        required: true,
     },
-    amountOfItem:{
-        amount:{
-            type: Number,
-            required: true,
-        },
-        unit:{
-            type: String,
-            enum: ['Kg','Lbs','actual item'],
-            required: true, 
-        },
+    amount:{
+        type: String,
     },
 })
 
-const AddUnitModel = mongoose.model("add", AddUnitSchema);
-module.exports = AddUnitModel;
+const addUnitModel = mongoose.model("add", AddUnitSchema);
+module.exports = addUnitModel;
