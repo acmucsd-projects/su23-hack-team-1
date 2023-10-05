@@ -12,7 +12,7 @@ function Pantry(){
   const[data,setData] = useState([])
 
   useEffect(() => {
-    axios.get("http://localhost:8000/Add")
+    axios.get("http://localhost:8000/Pantry")
     .then((res) => setData(res.data))
     .catch(err => console.log(err));
   }, [])
@@ -52,60 +52,55 @@ function Pantry(){
           </tr>
         </thead>
         <tbody>
-          {
-          data.map((items,i) => (
-            <tr key={i}>
-              <td>{items.name}</td>
-              <td>{items.itemType}</td>
-              <td>{items.fridge}</td>
-              <td>{items.amount}</td>
+            <tr>
+              <td>Bread</td>
+              <td>09/03/2023</td>
+              <td>5 Days Left</td>
+              <td>4</td>
               <td> </td>
               </tr>
-          ))
-          }
-          { <tr>
+          <tr>
             <td>Apples</td>
             <td>09/03/2023</td>
-            <td>2 days</td>
-            <td>3 apples</td>
+            <td>2 Days left</td>
+            <td>3</td>
             <td> </td>
           </tr>
           <tr>
             <td>Carrots</td>
             <td>09/03/2023</td>
-            <td>2 days</td>
-            <td>3 lb</td>
+            <td>1 day left</td>
+            <td>7</td>
             <td> </td>
           </tr>
           <tr>
             <td>Tomato Soup</td>
             <td>09/03/2023</td>
-            <td>10/01/2024</td>
-            <td>3 cans</td>
+            <td>40 Days Left</td>
+            <td>3 </td>
             <td> </td>
           </tr>
           <tr>
             <td>Honey</td>
             <td>09/03/2023</td>
-            <td>10/01/2026</td>
-            <td>1 bottle</td>
+            <td>100 Days Left</td>
+            <td>1</td>
             <td> </td>
           </tr>
           <tr>
             <td>Potatoes</td>
             <td>09/03/2023</td>
-            <td>10/01/2026</td>
-            <td>1 bag</td>
+            <td>20 Days Left</td>
+            <td>1 </td>
             <td> </td>
           </tr>
           <tr>
-            <td>Potatoes</td>
+            <td>Celery</td>
             <td>09/03/2023</td>
-            <td>10/01/2026</td>
-            <td>1 bag</td>
+            <td>2 Days Left</td>
+            <td>3</td>
             <td> </td>
-          </tr> }
-
+          </tr> 
           <tr class="last-row">
             <td> </td>
             <td> </td>
