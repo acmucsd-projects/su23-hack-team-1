@@ -39,17 +39,17 @@ app.post("/Signup", (req, res) =>{
   .catch(err => res.json(err))
 });
 
-app.post("/", (req, res) =>{
+app.post("/Pantry", (req, res) =>{
   ItemModel.create(req.body)
   .then(add => res.json(add))
   .catch(err => res.json(err))
 });
 
-app.get("/Pantry"),(req, res) => {
-  ItemModel.find({})
-  .then(add => res.json(add))
-  .catch(err => res.json(err))
-}
+// app.get("/Pantry"),(req, res) => {
+//   ItemModel.find({})
+//   .then(add => res.json(add))
+//   .catch(err => res.json(err))
+// }
 
 
 mongoose.connect(process.env.DB_URL, {

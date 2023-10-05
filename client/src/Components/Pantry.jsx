@@ -12,8 +12,8 @@ function Pantry(){
   const[data,setData] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:8000/Pantry')
-    .then(res => setData(res.data))
+    axios.get("http://localhost:8000/Add")
+    .then((res) => setData(res.data))
     .catch(err => console.log(err));
   }, [])
   function openModal(){
@@ -53,8 +53,8 @@ function Pantry(){
         </thead>
         <tbody>
           {
-          data.map((items) => (
-            <tr>
+          data.map((items,i) => (
+            <tr key={i}>
               <td>{items.name}</td>
               <td>{items.itemType}</td>
               <td>{items.fridge}</td>
@@ -63,7 +63,7 @@ function Pantry(){
               </tr>
           ))
           }
-          {/* <tr>
+          { <tr>
             <td>Apples</td>
             <td>09/03/2023</td>
             <td>2 days</td>
@@ -104,7 +104,7 @@ function Pantry(){
             <td>10/01/2026</td>
             <td>1 bag</td>
             <td> </td>
-          </tr> */}
+          </tr> }
 
           <tr class="last-row">
             <td> </td>
