@@ -22,8 +22,11 @@ const AddUnitSchema = new mongoose.Schema({
     },
     amount:{
         type: String,
-    },
-})
+    }
+},
+    {
+    versionKey:false
+    });
 
 const addUnitModel = mongoose.model("add", AddUnitSchema);
 module.exports = addUnitModel;

@@ -53,12 +53,12 @@ function Pantry(){
         </thead>
         <tbody>
           {
-          data.map((item,i) => (
-            <tr key={i}>
-              <td>{item.name}</td>
-              <td>{item.purchaseDate}</td>
-              <td>{item.expiryDate}</td>
-              <td>{item.amount}</td>
+          data.map((items) => (
+            <tr>
+              <td>{items.name}</td>
+              <td>{items.itemType}</td>
+              <td>{items.fridge}</td>
+              <td>{items.amount}</td>
               <td> </td>
               </tr>
           ))

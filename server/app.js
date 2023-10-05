@@ -39,7 +39,7 @@ app.post("/Signup", (req, res) =>{
   .catch(err => res.json(err))
 });
 
-app.post("/Pantry", (req, res) =>{
+app.post("/", (req, res) =>{
   ItemModel.create(req.body)
   .then(add => res.json(add))
   .catch(err => res.json(err))

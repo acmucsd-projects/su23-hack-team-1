@@ -5,7 +5,7 @@ import DatePicker from "react-datepicker";
 import axios from "axios";
 import "react-datepicker/dist/react-datepicker.css";
 function Dropdownbox() {
-  const url = "http://localhost:8000/Pantry";
+  const url = "http://localhost:8000/";
   // const [name, setUserName] = useState("");
   // const [selectItem, setSelectitem] = useState("");
   // const [Amount, setAmount] = useState("");
@@ -124,7 +124,7 @@ function Dropdownbox() {
 
           <label className="submit-button">
             <input
-              className="submit-button-add-item ${checked ? 'pressed' : ''}"
+              className="submit-button-add-item"
               type="submit"
             />
           </label>
