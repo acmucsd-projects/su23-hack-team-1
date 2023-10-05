@@ -11,8 +11,10 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
+dotenv.config();
 
 const UserModel = require('./models/users.js');
+const ItemModel = require('./models/addunit.js');
 
 app.post("/Login", (req, res) =>{
   const {username, password} = req.body;
@@ -36,7 +38,19 @@ app.post("/Signup", (req, res) =>{
   .then(users => res.json(users))
   .catch(err => res.json(err))
 });
-dotenv.config();
+
+app.post("/Pantry", (req, res) =>{
+  ItemModel.create(req.body)
+  .then(add => res.json(add))
+  .catch(err => res.json(err))
+});
+
+// app.get("/Pantry"),(req, res) => {
+//   ItemModel.find({})
+//   .then(add => res.json(add))
+//   .catch(err => res.json(err))
+// }
+
 
 mongoose.connect(process.env.DB_URL, {
     useNewUrlParser: true,
