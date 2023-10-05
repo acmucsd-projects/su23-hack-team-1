@@ -6,13 +6,7 @@ import axios from "axios";
 import "react-datepicker/dist/react-datepicker.css";
 function Dropdownbox() {
   const url = "http://localhost:8000/Pantry";
-  // const [name, setUserName] = useState("");
-  // const [selectItem, setSelectitem] = useState("");
-  // const [Amount, setAmount] = useState("");
-  // const [Fridge, setFridge] = useState("");
-  // const [purchaseDate, setPurchaseDate] = useState(null);
-  // const [expiryDate, setExpiryDate] = useState(null);
-  // const [checked, setChecked] = React.useState(false);
+
   const[startDate, setStartDate] = useState();
   const[endDate, setEndDate] = useState();
   const [values, setValues] = useState({
@@ -84,10 +78,11 @@ function Dropdownbox() {
               </select>
             </label>
 
-            <div>
+            <div >
               <label>
                 <p className="body">Purchase Date:</p>
               </label>
+              <div className="start">
               <DatePicker
                 selected={startDate}
                 onChange={startDate => setStartDate(startDate)}
@@ -96,12 +91,14 @@ function Dropdownbox() {
                 showYearDropdown // Enable year dropdown
                 scrollableYearDropdown // Allow scrolling through years
               />
+              </div>
             </div>
 
             <div>
               <label>
                 <p className="body">Expiry Date:</p>
               </label>
+              <div className="start">
               <DatePicker
                 selected={endDate}
                 onChange={(endDate) => setEndDate(endDate)}
@@ -111,11 +108,13 @@ function Dropdownbox() {
                 showYearDropdown // Enable year dropdown
                 scrollableYearDropdown // Allow scrolling through years
               />
+              </div>
             </div>
 
             <label>
               <p className="body">Amount</p>
               <input
+                className="amount-box"
                 onChange={e => setValues({...values, amount: e.target.value})}
                 placeholder="1,2,3..."
               />

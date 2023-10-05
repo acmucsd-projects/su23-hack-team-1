@@ -1,21 +1,12 @@
 import React from 'react';
-import { useState,useEffect} from "react";
+import { useState} from "react";
 import "./ItemList.css";
 import Navbar from "./navbar.jsx";
 import Dropdownbox from "./add-item-box.jsx";
 import Modal from 'react-modal';
-import axios from "axios";
 
 function Pantry(){
 
-
-  const[data,setData] = useState([])
-
-  useEffect(() => {
-    axios.get("http://localhost:8000/Pantry")
-    .then((res) => setData(res.data))
-    .catch(err => console.log(err));
-  }, [])
   function openModal(){
     setIsOpen(true);
   }

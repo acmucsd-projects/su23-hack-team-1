@@ -18,18 +18,28 @@
     padding: 3%;
     flex-direction: column;
 }
-input{
-    width: 18rem;
+ input.name{
+    width: 16rem;
     height: 2rem;
     border-radius: 8px;
     background: #FFF;
     box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.10);
-}
+    position:relative;
+    right:2.6rem;
+} 
 
+input.amount-box{
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.10);
+    height: 2rem;
+    border:none;
+    text-align:center;
+}
 select{
     margin-top: 3%;
     margin-bottom: 1%;
-    width: 20rem;
+    width: 18rem;
     height: 4rem;
     padding-left: 10px;
     border-style: none;
@@ -38,15 +48,13 @@ select{
     box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.10);
 }
 
-.name{
-    width: 95px;
-}
+
 .body{
     color: #a6b2a6;
     font-size: smaller;
     font-family: "League Spartan;", Helvetica;
     font-weight: 200;
-    margin-left:3%;
+    margin-left:0%;
 }
 label{
     color: #92AD92;
@@ -60,7 +68,8 @@ label{
 .Item{
     font-size: 30px;
     font-weight: 800;
-    margin-right: 10px;
+    position:relative;
+    right:3rem;
 }
 
 .labelled-form{
@@ -79,6 +88,12 @@ label{
     height: min-content;
 }
 
+.start{
+    background-color: white;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.10);
+    border-radius:8px;
+}
+
 .submit-button-add-item{
     display: flex;
     margin-left: auto;
@@ -86,6 +101,8 @@ label{
 }
 
 .submit-button-add-item{
+    margin-top:1rem;
+    border-radius:8px;
     width: min-content;
     height: min-content;
     background-color: #92AD92;
