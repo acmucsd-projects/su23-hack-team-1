@@ -19,9 +19,6 @@ function Dropdownbox() {
   })
 
   
-  // const handleChange = () => {
-  //   setChecked(!checked);
-  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
